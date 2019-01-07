@@ -2,14 +2,19 @@
 % sudo apt-get install texlive-latex-base texlive-fonts-recommended texlive-fonts-extra texlive-latex-extra texlive-bibtex-extra biber
 % Change the page layout if you need to
 \geometry{left=1cm,right=9cm,marginparwidth=6.8cm,marginparsep=1.2cm,top=1.25cm,bottom=1.25cm}
+\definecolor{linkColor}{HTML}{AA4B41}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[default]{lato}
+\usepackage[colorlinks = true,
+            linkcolor = {linkColor},
+            urlcolor  = {linkColor},
+            citecolor = {linkColor},
+            anchorcolor = {linkColor}]{hyperref}
 
-% Change the colours if you want to
-\definecolor{VividPurple}{HTML}{3E0097}
-\definecolor{SlateGrey}{HTML}{2E2E2E}
-\definecolor{LightGrey}{HTML}{666666}
+\definecolor{VividPurple}{HTML}{335252}
+\definecolor{SlateGrey}{HTML}{2D3033}
+\definecolor{LightGrey}{HTML}{D4DDE1}
 \colorlet{heading}{VividPurple}
 \colorlet{accent}{VividPurple}
 \colorlet{emphasis}{SlateGrey}
@@ -22,21 +27,17 @@
 
 \begin{document}
 \name{Michał Żyłowski}
-\tagline{Business Woman \& Proud Geek}
-% Cropped to square from https://en.wikipedia.org/wiki/Marissa_Mayer#/media/File:Marissa_Mayer_May_2014_(cropped).jpg, CC-BY 2.0
+\tagline{Clound Engineer at Intel Corporation \break The open source philosophy believer}
 \photo{2.5cm}{mz}
 \personalinfo{%
   % Not all of these are required!
   % You can add your own with \printinfo{symbol}{detail}
-  \email{mmayer@yahoo-inc.com}
-  \phone{000-00-0000}
-  \mailaddress{Address, Street, 00000 County}
-  \location{Sunnyvale, CA}
-  \homepage{marissamayr.tumblr.com/}
-  \twitter{@marissamayer}
-  \linkedin{linkedin.com/in/marissamayer}
-  \github{github.com/mmayer} % I'm just making this up though.
-%   \orcid{orcid.org/0000-0000-0000-0000} % Obviously making this up too. If you want to use this field (and also other academicons symbols), add "academicons" option to \documentclass{altacv}
+  \email{michal@zylowski.net}
+  \phone{000-000-000} %private-data
+  \location{Gdansk, Poland}
+  \homepage{\href{https://zylowski.net}{zylowski.net}}
+  \linkedin{\href{https://www.linkedin.com/in/micha\%C5\%82-\%C5\%BCy\%C5\%82owski-6ba824110/}{linkedin.com/in/mzylowski}}
+  \github{\href{https://github.com/mzylowski}{github.com/mzylowski}}
 }
 
 %% Make the header extend all the way to the right, if you want.
