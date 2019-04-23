@@ -2,14 +2,15 @@ FROM ubuntu:18.04 as latex
 
 #Install dependencies
 ENV DEBIAN_FRONTEND noninteractive
-RUN apt-get update && apt-get -y install texlive-latex-extra texlive-lang-polish texlive-fonts-extra && apt-get clean
+RUN apt-get update && apt-get -y install texlive-latex-extra texlive-lang-polish texlive-fonts-extra apache2 && apt-get clean
 
-#Build project
-COPY cv /cv
-WORKDIR /cv
+#Copy sources
+COPY . /var/www/html
+WORKDIR /var/www/html
 
-RUN pdflatex cv.tex
+#Build project for the first time
+RUN cd cv && pdflatex cv.tex
+WORKDIR cv
 
-#Prepare container for hosting CV
-FROM httpd:2.4 as hoster
-COPY --from=latex /cv/cv.pdf /usr/local/apache2/htdocs
+EXPOSE 80
+CMD ["apachectl", "-D", "FOREGROUND"]
