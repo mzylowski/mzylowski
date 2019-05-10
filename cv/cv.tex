@@ -215,6 +215,93 @@
 
 }
 
+%----------------------------------------------------------------------------------------
+%	 CV EVENT LONG
+%----------------------------------------------------------------------------------------
+
+% creates a stretched box as cv entry headline followed by two paragraphs about
+% the work you did
+% param 1:	event time i.e. 2014 or 2011-2014 etc.
+% param 2:	event name (what did you do?)
+% param 3:	institution (where did you work / study)
+% param 4:	what was your position
+% param 5:	some words about your contributions
+% param 6:	some words about your contributions
+% param 7:	some words about your contributions
+%
+\newcommand{\cveventlong}[7]
+{
+\vspace{8pt}
+	\begin{tabular*}{1\mpwidth}{p{0.45\mpwidth}  x{0.52\mpwidth}}
+ 	\textcolor{black}{\textbf{#2}} & \textcolor{complcol}{#3}, \textcolor{bgcol}{#1}
+
+	\end{tabular*}
+\vspace{-12pt}
+\textcolor{softcol}{\hrule}
+\vspace{6pt}
+	\begin{tabular*}{0.5\mpwidth}{p{\mpwidth}}
+\larrow{softcol}  #4\\[3pt]
+\larrow{softcol}  #5\\[6pt]
+\larrow{softcol}  #6\\[6pt]
+\larrow{softcol}  #7\\[6pt]
+	\end{tabular*}
+
+}
+
+%----------------------------------------------------------------------------------------
+%	 CV EVENT ONE
+%----------------------------------------------------------------------------------------
+
+% creates a stretched box as cv entry headline followed by two paragraphs about
+% the work you did
+% param 1:	event time i.e. 2014 or 2011-2014 etc.
+% param 2:	event name (what did you do?)
+% param 3:	institution (where did you work / study)
+% param 4:	what was your position
+%
+\newcommand{\cveventone}[4]
+{
+\vspace{8pt}
+	\begin{tabular*}{1\mpwidth}{p{0.48\mpwidth}  x{0.49\mpwidth}}
+ 	\textcolor{black}{\textbf{#2}} & \textcolor{complcol}{#3}, \textcolor{bgcol}{#1}
+
+	\end{tabular*}
+\vspace{-12pt}
+\textcolor{softcol}{\hrule}
+\vspace{6pt}
+	\begin{tabular*}{0.5\mpwidth}{p{\mpwidth}}
+\larrow{softcol}  #4\\[3pt]
+	\end{tabular*}
+
+}
+
+%----------------------------------------------------------------------------------------
+%	 SIMPLE LIST
+%----------------------------------------------------------------------------------------
+
+% creates a stretched box as cv entry headline followed by two paragraphs about
+% the work you did
+% param 1:	List title
+% param 2:	First line
+% param 3:	2nd line
+%
+\newcommand{\simplelist}[3]
+{
+\vspace{8pt}
+	\begin{tabular*}{1\mpwidth}{p{0.48\mpwidth}  x{0.49\mpwidth}}
+ 	\textcolor{black}{\textbf{#1}}
+
+	\end{tabular*}
+\vspace{-12pt}
+\textcolor{softcol}{\hrule}
+\vspace{6pt}
+	\begin{tabular*}{0.5\mpwidth}{p{\mpwidth}}
+\larrow{softcol}  #2\\[3pt]
+\larrow{softcol}  #3\\[3pt]
+	\end{tabular*}
+
+}
+
 % creates a stretched box as 
 \newcommand{\cveventmeta}[2]
 {
@@ -327,63 +414,30 @@
 %----------------------------------------------------------------------------------------
 \cvsection{Status}
 
-JavaScript fullstack engineer, M.Sc. Digital Media, focuses on education and healthcar i cos tam jeszcze i cos jeszczee
+Cloud solution engineer at Intel Corporation involved into projects related with containers orchestration, automation and scheduling on clouds. Teacher, mentor and lecturer for other coworkers or students. Open source philosophy believer. Automation engineer.
 
 \vspace{12pt}
 
 %---------------------------------------------------------------------------------------
 %	EXPERIENCE
 %----------------------------------------------------------------------------------------
-\cvsection{Experience}
+\cvsection{EMPLOYMENT HISTORY}
 
 %
-\cvevent{2016/09 - now}{Fullstack Javascript Engineer}{University of Bremen}{Invent a realtime classroom management using Meteor and React}{Design software architecture and leading development}
+\cveventlong{2015/05 - now}{Intel Technology Poland}{Programmer \& DevOps}{2018/11 Software Cloud Engineer at Artificial Intelligence group in Nauta project}{2017/10 Software Development Engineer at Linux Virtual RAID on CPU project}{2017/05 Software Validation Engineer at Rapid Storage Technology enterprise team}{2015/05 Software Engineer Intern at Software Defined Infrastructure team}
+\cvevent{2018/09 - now}{Gdańsk WSB University}{Lecturer}{Teacher of programming languages like: Python, C++, Java, C\#} {Tutor of concepts like: Cloud, Object Oriented Programming, WWW designing}
 
 %\textcolor{softcol}{\hrule}
-
-
-%\cvevent{2014 - 2016}{IT Consultant for IBM XPages and Notes Domino}{We4IT GmbH Bremen}{Realize projects in XPages and We4IT Aveedo, monitor project status, conduct reports}{Integrated Camunda BPMN engine and BPMN.IO modeler in We4IT Aveedo}
-
-
-%\textcolor{softcol}{\hrule}
-
-
-\cvevent{2012 - 2014}{Scientific Employee / Software Development}{University of Bremen}{Inveadsadadasfffasf fas sfafs ffasfsa fffsa fas fasf  ffsnted a flexible assessment framework, targeting industrial trainees}{Supervised software development lifecycle, Recruited team members}
-
-%\textcolor{softcol}{\hrule}
-
-%
-\cvevent{2011 / 11}{Project Management Simulation Training}{Getoq Consulting}{Performed a two-day project simulation from management perspective}{Topics included customer contracts, change management, controlling, operational tasks}
-
-%\textcolor{softcol}{\hrule}
-
-
-%
-\cvevent{2010 - 2011}{Student Assistant / Programmer}{otulea.uni-bremen.de}{Realized an online diagnosis platform for workforce literacy development (Flex)}{Modeled software design, implemented various prototypes, conducted usability tests}
 
 \vspace{12pt}
 %---------------------------------------------------------------------------------------
-%	EDUCATION SECTION
+%	EDUCATION
 %--------------------------------------------------------------------------------------
-\cvsection{Education}
+\cvsection{EDUCATION}
 
-\cvevent{2015 / 07}{Graduated as M.Sc. Digital Media}{University of Bremen}{Master Thesis: Semi Automated Scoring in Technology Based Assessment}{Developed and evaluated an algorithm for semi automated scoring of spreadsheet data}
-
-%\textcolor{softcol}{\hrule}
-
-%
-\cvevent{2012 - 2013}{Master Project - PrIMA}{University of Bremen}{Co-Invented a touch table application for medical support, co-developed software (Java) }{Formed a scrum team, mainted project dev server (Debian), surveyed target audience}
-
-%\textcolor{softcol}{\hrule}
-
-%
-\cvevent{2012 - 2015}{Master Studies Digital Media}{University of Bremen}{Inter-cultural classes in English, covering special topics in computer science and design}{Professionalized in research methods, software development and e-assessment}
-
-%\textcolor{softcol}{\hrule}
-
-%
-\cvevent{2009 - 2010}{Semester Abroad}{University of Melbourne}{Mastered six months of study and trans-cultural experience in Melbourne, Australia}{Finished machine programming, information visualization, professional essay writing}
-
+\cvevent{2012-2017}{Gdańsk University of Technology}{ETI Faculty}{Master degree: Informatics, full-time. Thesis: Mesos schedulers examination}{Engineering degree: Informatics, full-time. Thesis: Programmable RTS game}
+\cveventone{2007-2011}{Zespół Szkół Technicznych Grudziądz}{IT technical school}{Course: Computer Science, Specialization: Internet Applications}
+\simplelist{Certificates}{2016/07  Linux Troubleshooting course performed by Hewlett Packard Enterprise}{2013/06 “ABC of business management” certificate}
 
 \end{minipage}}%
 \fcolorbox{white}{sectcol}{\begin{minipage}[c][0.95\textheight][t]{0.33\linewidth}
