@@ -221,6 +221,34 @@
 }
 
 %----------------------------------------------------------------------------------------
+%	 PORTFOLIO ITEM
+%----------------------------------------------------------------------------------------
+
+\newcommand{\portfolioitem}[7]
+{
+\vspace{8pt}
+	\begin{tabular*}{1\mpwidth}{p{0.45\mpwidth}  x{0.52\mpwidth}}
+ 	\textcolor{black}{\textbf{#2}} & \textcolor{complcol}{#3}, \textcolor{bgcol}{#1}
+
+	\end{tabular*}
+\vspace{-12pt}
+\textcolor{softcol}{\hrule}
+\vspace{5pt}
+  \begin{tabular}{ c m{13cm} }
+    \begin{minipage}{.3\textwidth}
+      \includegraphics[width={#5}\mpwidth]{#4}
+    \end{minipage}
+    & #6
+
+Links: #7 \\
+  \end{tabular}
+}
+
+\newcommand{\portfoliohref}[2]{
+\href[pdfnewwindow=true]{#1}{\color{complcol}{#2}}
+}
+
+%----------------------------------------------------------------------------------------
 %	 CV EVENT LONG
 %----------------------------------------------------------------------------------------
 
@@ -588,6 +616,11 @@ Poland 2002 No 101, item 926 with further amendments)
 \null
 \vspace*{\fill}
 \hspace{-0.25\linewidth}\colorbox{bgcol}{\makebox[1.5\linewidth][c]{\mystrut \small \textcolor{white}{ }}}
+
+\newpage
+\cvsection{Projects Portfolio}
+
+\portfolioitem{2018/10 - now}{Intel Technology Poland}{Code Developer \& DevOps}{img/nauta.png}{1.1}{2018/11 Software Cloud Engineer at Artificial Intelligence group in Nauta project2017/10 Software Development Engineer at Linux Virtual RAID on CPU project2017/05 Software Validation Engineer at Rapid Storage Technology enterprise team2015/05 Software Engineer Intern at Software Defined Infrastructure team}{\portfoliohref{http://www.sharelatex.com}{Something Linky} | \portfoliohref{http://www.sharelatex.com}{Something Linky}}
 
 %============================================================================%
 %
