@@ -1,0 +1,16 @@
+language: go
+sudo: reuired
+install: true
+dist: bionic
+
+go:
+  - 1.12.5
+
+services:
+  - docker
+
+script:
+  - go get -u github.com/vbatts/git-validation
+  - git-validation -q -run DCO,short-subject -range b9d82623fadc8066e7832035d25d879e150bd6f3..HEAD
+  - ./build.sh
+
