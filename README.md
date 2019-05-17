@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.com/mzylowski/resume.svg?branch=master)](https://travis-ci.com/mzylowski/resume)
+
 ### mzylowsk CV and portfolio
 
 CV bases on sidebar template from https://github.com/jankapunkt/latexcv project
