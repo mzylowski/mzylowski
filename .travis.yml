@@ -1,27 +1,42 @@
 dist: xenial
 matrix:
   include:
-    - language: go
-      sudo: required
-      go: 1.12.5
-      before_script:
-        - go get -u github.com/vbatts/git-validation
-      script:
-        - git-validation -q -run DCO,short-subject -range b9d82623fadc8066e7832035d25d879e150bd6f3..HEAD
-
-    - language: node_js
-      sudo: required
-      node_js: 9
-      services:
-      - docker
-      cache:
-        yarn: false
-      install:
-        - yarn install
-        - sudo apt update && sudo apt install poppler-utils
-      script:
-        - ./build.sh && sleep 5
-        - docker run -d -p 8080:80 --name cv -v $(pwd):/var/www/html cv_builder && sleep 5
-        - docker exec cv pdflatex cv.tex
-        - docker exec cv pdftotext -enc Windows-1255 cv.pdf cv.md
-        - yarn spellcheck
+  - language: go
+    sudo: required
+    go: 1.12.5
+    before_script:
+    - go get -u github.com/vbatts/git-validation
+    script:
+    - git-validation -q -run DCO,short-subject -range b9d82623fadc8066e7832035d25d879e150bd6f3..HEAD
+  - language: node_js
+    sudo: required
+    node_js: 9
+    services:
+    - docker
+    cache:
+      yarn: false
+    install:
+    - yarn install
+    script:
+    - "./build.sh && sleep 5"
+    - docker run -d -p 8080:80 --name cv -v $(pwd):/var/www/html cv_builder && sleep 5
+    - docker exec cv pdflatex cv.tex
+    - docker exec cv pdftotext -enc Windows-1255 cv.pdf cv.md
+    - yarn spellcheck
+    before_deploy:
+      # Set up git user name and tag this commit
+      - git config --local user.name "Michal Zylowski"
+      - git config --local user.email "michal@zylowski.net"
+      - export TRAVIS_TAG="latest"
+      - git tag -f $TRAVIS_TAG
+    deploy:
+      provider: releases
+      skip_cleanup: true
+      overwrite: true
+      body: "Current CV from master branch"
+      name: "latest"
+      api_key:
+        secure: EbEY8o3ebQtZb4y/8tTYd5pVf1lL+V2UM0ONBPTPotv0OFVAXNRy3QSuVDRlb2Y4ryVmpCIFs5nTZl3iSpJRgb8xNXRdZAk8GpwiII4VGYsjTo2uiuxFZiH0ObvHKrIzObHZFqr7AgemrlWxGc+Ahqd+PdFBkiNk88Bwhw9CeUHMQNJOr6tWYbu1rvcIq90DQ2uDxPo/3AaQLuq6SmYn1rh+ptzamF/FK7gsN//t86YJkImUlO4g/+OyziwxExtdQrwyOt2Ll6T/MOMPqsS5I9pl2khzHeM2bkCYM+doD2nK0fRgbpyXkoubH2kj3gh6sGCanD9bNYg1Spju5/9/9K8vyZGN4BFuZaa4f3idP1JyLWnNGht8WTbSclYguKJC+6JV6ZzeM4ZLGGvwjTdSA5DRSfiw0Y2y/RkdOtU3d+Q+Hg4zjWXa+VV4CssxdN745Jp1ic6TkzVIbEJpb5oSCcZN344Sgk9YoxgIykEZWJE6P3dWCufIsncQwL2Z13p9LEEhnqjDnu4bbbllXzJT7WcuVbR5CYM6O8V4K4iJ+wiAxKP7OCaaXkcq5l24pyTnkM2+JJ7emX93fCWgGvE8Cy6pjLXzYIDujPCF6yRI+2ohpxpLvYLsaJG90OBbi+JL0aI8hPqWL3gi2yqcXlGtpOz+bUlSCu4Rr4htIEJaI2Y=
+      file: cv/cv.pdf
+      on:
+        repo: mzylowski/resume

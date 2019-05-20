@@ -20,4 +20,4 @@ docker exec cv pdflatex cv.tex
 
 Go to browser and visit: http://127.0.0.1:8080/cv.pdf
 
-Re-run docker exec every time when you want to test any CV changes.
+Re-run docker exec every time when you want to test any CV changes..
