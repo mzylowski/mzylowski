@@ -4,6 +4,9 @@
 
 CV bases on sidebar template from https://github.com/jankapunkt/latexcv project
 
+#### Latest version
+Latest version of CV can be downloaded in releases section: https://github.com/mzylowski/resume/releases
+
 
 #### Working with source code and docker container
 Build the container (all required latex dependencies will be installed):
