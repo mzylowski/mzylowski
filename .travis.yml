@@ -22,6 +22,7 @@ matrix:
     - docker run -d -p 8080:80 --name cv -v $(pwd):/var/www/html cv_builder && sleep 5
     - docker exec cv pdflatex cv.tex
     - docker exec cv pdftotext -enc Windows-1255 cv.pdf cv.md
+    - cat cv/cv.md
     - yarn spellcheck
     before_deploy:
       # Set up git user name and tag this commit
