@@ -25,5 +25,13 @@ jobs:
       - name: Print CV content for debugging purposes
         run: cat cv/cv.md
         working-directory: ./cv
-      - name: yarn spellcheck
+      - name: Run spellchecker
         run: yarn spellcheck
+      - name: Release
+        uses: softprops/action-gh-release@v1
+        if: github.ref == 'refs/heads/master'
+        with:
+          files: cv/cv/cv.pdf
+          tag_name: "latest"
+          body: "Current CV from master branch"
+          fail_on_unmatched_files: true
