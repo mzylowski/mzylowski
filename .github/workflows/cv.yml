@@ -1,0 +1,29 @@
+name: CV building and testing
+on: [push, pull_request]
+
+jobs:
+  cv_builder:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: setup node
+        uses: actions/setup-node@v3.0.0
+      - name: install yarn packages
+        run: yarn install
+      - name: Build the container
+        run: ./build.sh
+        working-directory: ./cv
+      - name: Run the container
+        run: docker run -d -p 8080:80 --name cv -v $(pwd):/var/www/html cv_builder && sleep 1
+        working-directory: ./cv
+      - name: Build CV PDF file
+        run: docker exec cv pdflatex cv.tex
+        working-directory: ./cv
+      - name: Extract CV content for spellchecking
+        run: docker exec cv pdftotext -enc Windows-1255 cv.pdf cv.md
+        working-directory: ./cv
+      - name: Print CV content for debugging purposes
+        run: cat cv/cv.md
+        working-directory: ./cv
+      - name: yarn spellcheck
+        run: yarn spellcheck

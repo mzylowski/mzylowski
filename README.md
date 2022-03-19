@@ -1,5 +1,3 @@
-[![Build Status](https://travis-ci.com/mzylowski/resume.svg?branch=master)](https://travis-ci.com/mzylowski/resume)
-
 ### mzylowsk CV and portfolio
 
 CV bases on sidebar template from https://github.com/jankapunkt/latexcv project
@@ -23,4 +21,4 @@ docker exec cv pdflatex cv.tex
 
 Go to browser and visit: http://127.0.0.1:8080/cv.pdf
 
-Re-run docker exec every time when you want to test any CV changes..
+Re-run docker exec every time when you want to test any CV changes.
