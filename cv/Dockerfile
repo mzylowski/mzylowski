@@ -1,4 +1,4 @@
-FROM ubuntu:18.04 as latex_deps
+FROM ubuntu:22.04 as latex_deps
 
 #Install dependencies
 ENV DEBIAN_FRONTEND noninteractive
