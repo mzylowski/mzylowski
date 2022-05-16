@@ -94,7 +94,7 @@
 %\restylefloat{figure}
 
 %for drawing graphics		
-\usepackage{tikz}				
+\usepackage{tikz,calc}
 \usetikzlibrary{shapes, backgrounds,mindmap, trees}
 
 
@@ -187,6 +187,23 @@
 	\normalsize
 	\parbox{0.7\mpwidth}{\textcolor{white}	\hrule}
 }{\end{center}}
+
+%----------------------------------------------------------------------------------------
+%	 PERCENTAGE CIRCLE
+%----------------------------------------------------------------------------------------
+\newlength\charwidth
+\newlength\chwidth
+\newcommand*\circled[1]{%
+  \settowidth\charwidth{#1\,\%}%
+  \settototalheight\chwidth{#1\,\%}%
+  \ifdim\chwidth>\charwidth\let\charwidth\chwidth\fi
+  \addtolength\charwidth{5pt}% twice inner sep plus half line width
+  \tikz[baseline=(char.base)]{%
+    \node [inner sep=2pt, circle] (char) {#1\,\%};
+    \draw [line width=2pt, color=complcol] (char.north) arc (90:90-#1*3.6:.5\charwidth) coordinate (a);
+    \draw [line width=2pt, color=sidebarcol]  (a) arc (90-#1*3.6:-270:.5\charwidth);
+  }%
+}
 
 %----------------------------------------------------------------------------------------
 %	 CV EVENT
@@ -475,6 +492,7 @@ Remote Cloud Software Engineer at OVHcloud. Part of R\&D team where I working wi
 %	TOP TECHNOLOGIES
 %--------------------------------------------------------------------------------------
 \cvsection{TOP TECHNOLOGIES}
+\circled{34}
 
 \larrow{softcol} Programming languages:
 \begin{center}
