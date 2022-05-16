@@ -9,12 +9,13 @@ Latest version of CV can be downloaded in releases section: https://github.com/m
 #### Working with source code and docker container
 Build the container (all required latex dependencies will be installed):
 ```
-git clone https://github.com/mzylowski/resume.git && cd resume
+git clone https://github.com/mzylowski/mzylowski.git && cd cv
 docker build . -t cv_builder
 ```
 
 Run container and build the CV:
 ```
+cd cv
 docker run -d -p 8080:80 --name cv -v $(pwd):/var/www/html cv_builder
 docker exec cv pdflatex cv.tex
 ```
