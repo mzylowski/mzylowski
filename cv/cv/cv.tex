@@ -37,6 +37,7 @@
 \usepackage{moresize}		
 
 \usepackage{fontawesome}
+\usepackage{worldflags}
 %----------------------------------------------------------------------------------------
 %	PAGE LAYOUT  DEFINITIONS
 %----------------------------------------------------------------------------------------
@@ -112,7 +113,7 @@
 \definecolor{bgcol}{RGB}{94, 143, 201} % footer and header
 
 %light background / accent color
-\definecolor{softcol}{RGB}{133,144,170}
+\definecolor{softcol}{RGB}{133,144,170} %previously: {225,225,225}
 
 \definecolor{sectcol}{RGB}{204, 195, 163} %cvevent background
 
@@ -134,6 +135,12 @@
 % to keep padding included in width calculations
 \newcommand{\mpwidth}{\linewidth-\fboxsep-\fboxsep}
 	
+
+%----------------------------------------------------------------------------------------
+% 	TIMELINE
+%----------------------------------------------------------------------------------------
+\newcommand\ytl[5]{
+\parbox[b]{8em}{\hfill{\color{bgcol}\bfseries\sffamily #1}~$\cdots\cdots$~}\makebox[0pt][c]{$\bullet$}\vrule\quad \worldflag[width=0.35cm,length=0.5cm]{#5}\parbox[c]{12cm}{\vspace{7pt}\color{black}\raggedright\sffamily #2: #3 \\ \color{complcol}#4\\[7pt]}\\[-3pt]}
 
 %----------------------------------------------------------------------------------------
 % 	ARROW GRAPHICS in Tikz
@@ -630,9 +637,9 @@ I agree to the processing of personal data provided in this document for realisi
 \larrow{softcol} Programming languages and technologies:
 \begin{center}
 \begin{tabular}{ r c r c r c r c}
-Python: & \circled{90} & Docker: & \circled{95} & Go: & \circled{70} & Databases & \circled{80} \\
-Ansible: & \circled{75} & Jenkins: & \circled{80} & C\#: & \circled{65} & Kubernetes: & \circled{95} \\
-S3/Minio: & \circled{95} & Web Dev: & \circled{70} & C++: & \circled{65} & Openstack: & \circled{95} \\
+Python: & \circled{90} & Docker: & \circled{95} & Go: & \circled{70} & Databases & \circled{80} \\[12pt]
+Ansible: & \circled{75} & Jenkins: & \circled{80} & C\#: & \circled{65} & Kubernetes: & \circled{95} \\[12pt]
+S3/Minio: & \circled{95} & Web Dev: & \circled{70} & C++: & \circled{65} & Openstack: & \circled{95} \\[12pt]
 \end{tabular}
 \end{center}
 
@@ -642,6 +649,26 @@ S3/Minio: & \circled{95} & Web Dev: & \circled{70} & C++: & \circled{65} & Opens
 OVH: & \circled{99} & GCP: & \circled{75} & AWS: & \circled{40} & Azure: & \circled{20} \\
 \end{tabular}
 \end{center}
+
+
+%---------------------------------------------------------------------------------------
+%	MAJOR TALKS ON CONFERENCES
+%--------------------------------------------------------------------------------------
+\cvsection{MAJOR TALKS ON CONFERENCES}
+\begin{table}[!h]
+%\caption{Timeline of talks}
+\centering
+\begin{minipage}[t]{.7\linewidth}
+\color{gray}
+\rule{\linewidth}{1pt}
+\ytl{25.11.2021}{WARSAW}{Innovation for Freedom}{\portfoliohref{https://github.com/mzylowski/demo25.11}{WORKSHOP: Cloud Means Freedom}}{GB}
+\ytl{23.03.2022}{REMOTE}{Targi pracy Jobicon: Czym jest chmura?}{\portfoliohref{https://raw.githubusercontent.com/mzylowski/mzylowski/master/cv/cv/confs/jobicon22.png}{PRESENTATION: O usługach chmurowych w prostych słowach}}{PL}
+\ytl{05-06.2022}{KRAKÓW, KATOWICE, WROCŁAW}{OVH RoadShow}{\portfoliohref{https://www.cloudforum.pl/2022/04/21/ovhcloud-techroadshow-czyli-jak-budowac-nowoczesne-aplikacje-w-europejskiej-chmurze-publicznej/}{WORKSHOP: Chmura publiczna OVHcloud}}{PL}
+\ytl{09.06.2022}{BERLIN}{Open Infrastructure Summit 2022}{TALK: How we integrated L3 services into one of the biggest OpenStack Public Clouds - OVHcloud case study}{GB}
+\bigskip
+\rule{\linewidth}{1pt}%
+\end{minipage}%
+\end{table}
 
 %---------------------------------------------------------------------------------------
 %	HOBBIES
