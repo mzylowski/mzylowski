@@ -1,9 +1,9 @@
 ### mzylowsk CV and portfolio
 
-CV bases on sidebar template from https://github.com/jankapunkt/latexcv project
+CV bases on sidebar template from https://github.com/jankapunkt/latexcv project. Boosted by mzylowski.
 
 #### Latest version
-Latest version of CV can be downloaded in releases section: https://github.com/mzylowski/resume/releases
+Latest version of CV can be downloaded in releases section: https://github.com/mzylowski/mzylowski/releases
 
 
 #### Working with source code and docker container
