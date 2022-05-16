@@ -5,7 +5,7 @@
 %============================================================================%
 
 %we use article class because we want to fully customize the page and dont use a cv template
-\documentclass[10pt,A4]{article}	
+\documentclass[11pt,A4]{article}
 
 
 %----------------------------------------------------------------------------------------
@@ -280,7 +280,7 @@ Related links: #7 \\
 \newcommand{\cveventlong}[7]
 {
 \vspace{8pt}
-	\begin{tabular*}{1\mpwidth}{p{0.45\mpwidth}  x{0.52\mpwidth}}
+	\begin{tabular*}{1\mpwidth}{p{0.40\mpwidth}  x{0.57\mpwidth}}
  	\textcolor{black}{\textbf{#2}} & \textcolor{complcol}{#3}, \textcolor{bgcol}{#1}
 
 	\end{tabular*}
@@ -310,7 +310,7 @@ Related links: #7 \\
 \newcommand{\cveventone}[4]
 {
 \vspace{8pt}
-	\begin{tabular*}{1\mpwidth}{p{0.48\mpwidth}  x{0.49\mpwidth}}
+	\begin{tabular*}{1\mpwidth}{p{0.55\mpwidth}  x{0.42\mpwidth}}
  	\textcolor{black}{\textbf{#2}} & \textcolor{complcol}{#3}, \textcolor{bgcol}{#1}
 
 	\end{tabular*}
@@ -411,7 +411,7 @@ Related links: #7 \\
 %
 %============================================================================%
 \begin{document}
-\fcolorbox{white}{white}{\begin{minipage}[c][0.97\textheight][t]{0.69\linewidth}
+\fcolorbox{white}{white}{\begin{minipage}[c][0.97\textheight][t]{0.72\linewidth}
 
 
 %---------------------------------------------------------------------------------------
@@ -472,7 +472,7 @@ Remote Cloud Software Engineer at OVHcloud. Part of R\&D team where I working wi
 \cvsection{EMPLOYMENT HISTORY}
 
 %
-\cvevent{2020/05 - now}{OVHcloud}{Cloud DevOps}{Public cloud R\&D team member, responsible for networking in openstack (neutron).}{OVH Public Cloud expert. Workshops and conferences speaker.}
+\cvevent{2020/05 - now}{OVHcloud}{Cloud DevOps}{Public cloud R\&D team member, responsible for networking in openstack}{OVH Public Cloud expert. Workshops and conferences speaker}
 \cvevent{2018/09 - 2021/06}{Gdańsk WSB University}{Lecturer}{Teacher of programming languages like: Python, C++, Java, C\#} {Tutor of concepts like: Cloud, OOP, WWW designing, Version Control}
 \cveventlong{2015/05 - 2020/05}{Intel Technology Poland}{Programmer \& DevOps}{2018/11 Software Cloud Engineer at Artificial Intelligence group in Nauta project}{2017/10 Software Development Engineer at Linux Virtual RAID on CPU project}{2017/05 Software Validation Engineer at Rapid Storage Technology enterprise team}{2015/05 Software Engineer Intern at Software Defined Infrastructure team}
 
@@ -489,41 +489,33 @@ Remote Cloud Software Engineer at OVHcloud. Part of R\&D team where I working wi
 \simplelist{Certificates}{2016/07  Linux Troubleshooting training performed by Hewlett Packard Enterprise}{2013/06 “ABC of business management” certificate}
 
 %---------------------------------------------------------------------------------------
-%	TOP TECHNOLOGIES
+%	TOP SKILLS
 %--------------------------------------------------------------------------------------
-\cvsection{TOP TECHNOLOGIES}
-% \larrow{softcol} Programming languages:
-% \begin{center}
-% \begin{tabular}{ r c r c r c}
-% Python & \icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{complcol} & Go-lang & \icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{emptystar}\icon{Star}{12}{emptystar} & C/C++ & \icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{emptystar} \\
-% C\# & \icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{emptystar} & Bash & \icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{emptystar} & Ansible & \icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{emptystar} \\
-% Java & \icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{emptystar}\icon{Star}{12}{emptystar} & Databases & \icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{emptystar} & WEB & \icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{emptystar}\icon{Star}{12}{emptystar}
-% \end{tabular}
-% \end{center}
+\cvsection{TOP SKILLS}
 
-\larrow{softcol} Programming languages and technologies:
-\begin{center}
-\begin{tabular}{ r c r c r c r c}
-Python: & \circled{90} & Docker: & \circled{95} & Go: & \circled{70} & Databases & \circled{80} \\
-Ansible: & \circled{75} & Jenkins: & \circled{80} & C\#: & \circled{65} & Kubernetes: & \circled{95} \\
-S3/Minio: & \circled{95} & Web Dev: & \circled{70} & C++: & \circled{65} & Openstack: & \circled{95} \\
-\end{tabular}
-\end{center}
+\larrow{softcol} Taking part in software development process using agile methodologies.
 
-\larrow{softcol} Cloud providers:
-\begin{center}
-\begin{tabular}{ r c r c r c r c}
-OVH: & \circled{99} & GCP: & \circled{75} & AWS: & \circled{40} & Azure: & \circled{20} \\
-\end{tabular}
-\end{center}
+\larrow{softcol} Understanding Test Driven Development technique.
 
-\cvsection{HOBBIES}
+%\larrow{softcol} Working using agile methodologies (Scrum, Kanban).
 
-% \larrow{softcol}
-Geocaching, astronomy, chess, opera, mountains, art exhibitions, home automation.
+\larrow{softcol} Understanding concept of CI/CD and experience in tools like (Jenkins, Circle CI, Github Workflows).
+
+\larrow{softcol} Deploying production k8s clusters in private environments.
+
+\larrow{softcol} Experienced in cooperation and collaboration with open source communities.
+
+\larrow{softcol} Linux kernel building and debugging. I have small patch in Linux kernel tree.
+
+\larrow{softcol} Taking care for details and minor issues that affect the quality of the product.
+
+\larrow{softcol} Tenacity during issue fixing and taking responsibility for the result.
+
+\larrow{softcol} Ability to debug complex and not obvious issues in linux ecosystems.
+\vspace{5px}
 
 \end{minipage}}%
-\fcolorbox{white}{sidebarcol}{\begin{minipage}[c][0.97\textheight][t]{0.33\linewidth}
+\fcolorbox{white}{sidebarcol}{\begin{minipage}[c][0.97\textheight][t]{0.28\linewidth}
 
 \vspace{5px}
 \begin{center}
@@ -574,8 +566,7 @@ Geocaching, astronomy, chess, opera, mountains, art exhibitions, home automation
 \begin{metasection}{Tools}
 
 \textcolor{white}{
-\icontext{Cubes}{12}{Pycharm}{white} \icontext{Terminal}{12}{Terminal}{white} \icontext{CodeFork}{12}{Git}{white} \\[6pt]
-\icontext{Tasks}{12}{Jira}{white}\icontext{Github}{12}{Github}{white}  \\[6pt]
+\icontext{Cubes}{12}{Pycharm}{white} \icontext{Terminal}{12}{Terminal}{white} \\[6pt] \icontext{CodeFork}{12}{Git}{white} \icontext{Tasks}{12}{Jira}{white}\icontext{Github}{12}{Github}{white}  \\[6pt]
 }
 \end{metasection}
 
@@ -586,7 +577,7 @@ Geocaching, astronomy, chess, opera, mountains, art exhibitions, home automation
 }
 \end{metasection}
 
-\vspace{95pt}
+\vspace{17pt}
 
 \begin{metasection}{Legal}
 
@@ -623,28 +614,41 @@ I agree to the processing of personal data provided in this document for realisi
 
 \newpage
 
-\cvsection{TOP SKILLS}
+%---------------------------------------------------------------------------------------
+%	TOP TECHNOLOGIES
+%--------------------------------------------------------------------------------------
+\cvsection{TOP TECHNOLOGIES}
+% \larrow{softcol} Programming languages:
+% \begin{center}
+% \begin{tabular}{ r c r c r c}
+% Python & \icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{complcol} & Go-lang & \icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{emptystar}\icon{Star}{12}{emptystar} & C/C++ & \icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{emptystar} \\
+% C\# & \icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{emptystar} & Bash & \icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{emptystar} & Ansible & \icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{emptystar} \\
+% Java & \icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{emptystar}\icon{Star}{12}{emptystar} & Databases & \icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{emptystar} & WEB & \icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{emptystar}\icon{Star}{12}{emptystar}
+% \end{tabular}
+% \end{center}
 
-\larrow{softcol} Taking part in software development process using agile methodologies.
+\larrow{softcol} Programming languages and technologies:
+\begin{center}
+\begin{tabular}{ r c r c r c r c}
+Python: & \circled{90} & Docker: & \circled{95} & Go: & \circled{70} & Databases & \circled{80} \\
+Ansible: & \circled{75} & Jenkins: & \circled{80} & C\#: & \circled{65} & Kubernetes: & \circled{95} \\
+S3/Minio: & \circled{95} & Web Dev: & \circled{70} & C++: & \circled{65} & Openstack: & \circled{95} \\
+\end{tabular}
+\end{center}
 
-\larrow{softcol} Understanding Test Driven Development technique.
+\larrow{softcol} Cloud providers:
+\begin{center}
+\begin{tabular}{ r c r c r c r c}
+OVH: & \circled{99} & GCP: & \circled{75} & AWS: & \circled{40} & Azure: & \circled{20} \\
+\end{tabular}
+\end{center}
 
-%\larrow{softcol} Working using agile methodologies (Scrum, Kanban).
+%---------------------------------------------------------------------------------------
+%	HOBBIES
+%--------------------------------------------------------------------------------------
+\cvsection{HOBBIES}
 
-\larrow{softcol} Understanding concept of CI/CD and experience in tools like (Jenkins, Circle CI, Github Workflows).
-
-\larrow{softcol} Deploying production k8s clusters in private environments.
-
-\larrow{softcol} Experienced in cooperation and collaboration with open source communities.
-
-\larrow{softcol} Linux kernel building and debugging. I have small patch in Linux kernel tree.
-
-\larrow{softcol} Taking care for details and minor issues that affect the quality of the product.
-
-\larrow{softcol} Tenacity during issue fixing and taking responsibility for the result.
-
-\larrow{softcol} Ability to debug complex and not obvious issues in linux distributions.
-\vspace{5px}
+\larrow{softcol} Geocaching, astronomy, chess, opera, mountains, art exhibitions, home automation.
 
 \newpage
 \cvsection{Projects Portfolio}
