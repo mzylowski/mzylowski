@@ -249,7 +249,7 @@
 {
 \medskip\medskip
 \vspace{8pt}
-	\begin{tabular*}{1\mpwidth}{p{0.45\mpwidth}  x{0.52\mpwidth}}
+	\begin{tabular*}{1\mpwidth}{p{0.42\mpwidth}  x{0.55\mpwidth}}
  	\textcolor{black}{\textbf{#2}} & \textcolor{complcol}{#3}, \textcolor{bgcol}{#1}
 
 	\end{tabular*}
@@ -677,18 +677,25 @@ OVH: & \circled{99} & GCP: & \circled{75} & AWS: & \circled{40} & Azure: & \circ
 
 \larrow{softcol} Geocaching, astronomy, chess, opera, mountains, art exhibitions, home automation.
 
+\vspace*{\fill}
+\hspace{-0.25\linewidth}\colorbox{bgcol}{\makebox[1.5\linewidth][c]{\mystrut \small \textcolor{white}{ }}}
+
 \newpage
 \cvsection{Projects Portfolio}
 
+\portfolioitem{2020/05 - now}{Networking in OVHcloud Public Cloud}{Code developer \& DevOps}{img/ovhcloud.jpg}{1.0}
+{OVH's Public Cloud is built on an Openstack solution, where project Neutron is responsible for networking part. To handle networking in a way that OVH needs few python agents (neutron plugins) was introduced. In R\&D team where I also belongs We are responsible for developing and maintaining those plugins. This includes bug fixing, deep debugging around linux system and networking, upgrading to new Openstack releases and delivering new features like L3 services or virtual routers.}
+{\portfoliohref{https://github.com/rkt/rkt/pull/3093/files}{Example of contribution} | \portfoliohref{https://github.com/rkt/rkt/issues/3019}{Discovered issue}}{}
+
 \portfolioitem{2018/10 - now}{Nauta Platform}{Code developer \& DevOps}{img/nauta.png}{1.1}
 {Nauta is a deep learning platform developed on top of a Kubernetes cluster that allows scheduling artificial intelligence experiments by data-scientists not familiarized with clouds topics. I joined to Nauta development team when project was is alpha state. My responsibilities were related with maintaining platform build system written in makefile and ansible, preparing user-guide web UI and fixing bugs in nauta CLI(python). I also was involved in development of internal CI/CD solution. Nauta is an open source project published on github, written in python, go-lang, JS and others.}
-{\portfoliohref{https://github.com/IntelAI/nauta/commit/7efbdac3e9cc4d64afd6b6e6fb0481e2b2436ff9}{UI component} | \portfoliohref{https://github.com/IntelAI/nauta/commit/c4ecc8a44ba212516ec4dd2f9a4bf830ed589701}{Build system change} | \portfoliohref{https://github.com/IntelAI/nauta/commit/abde914c1eccf2612774e67646564a2f61caa44e}{Nauta CLI improvement}}{}
+{\portfoliohref{https://github.com/IntelAI/nauta/commit/7efbdac3e9cc4d64afd6b6e6fb0481e2b2436ff9}{UI component} | \portfoliohref{https://github.com/IntelAI/nauta/commit/c4ecc8a44ba212516ec4dd2f9a4bf830ed589701}{Build system change} | \portfoliohref{https://github.com/IntelAI/nauta/commit/abde914c1eccf2612774e67646564a2f61caa44e}{Nauta CLI change}}{}
 
 \portfolioitem{2017/06 - 2018/10}{Virtual RAID on CPU for Linux}{Developer, External contributor, Maintainer}{img/vroc.jpg}{1.0}
 {VROC is a name for entire solution related with software RAID arrays targeted to enterprise solutions. Solution consists of two linux applications: mdadm and ledmon, and with kernel module named md. All related code is written in C. My team was responsible for maintenance of IMSM metadata in mdadm and entire linux ecosystem. Mdadm is used as CLI tool in RHEL, SLES and Ubuntu operation systems. My work was mostly related with bug fixing and cooperation with operating systems vendors (like SUSE or Cannonical). When mdadm is external kernel project, ledmon is a open source project fully developed by Intel and I was a maintainer of the project and repository. Ledmon was designed for blinking LEDs of disks under RAID arrays in VROC stack.}
-{\portfoliohref{https://github.com/intel/ledmon/commits?author=mzylowski}{My ledmon commits} | \portfoliohref{https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/scripts/checkpatch.pl?id=6ad724e2a48fc24dd9788490d85a3490cb0117c1}{Linux kernel patch} | \portfoliohref{https://git.kernel.org/pub/scm/utils/mdadm/mdadm.git/log/?qt=grep\&q=Michal+Zylowski}{My mdadm patches}}{}
+{\portfoliohref{https://github.com/intel/ledmon/commits?author=mzylowski}{My ledmon commits} | \portfoliohref{https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/scripts/checkpatch.pl?id=6ad724e2a48fc24dd9788490d85a3490cb0117c1}{Kernel patch} | \portfoliohref{https://git.kernel.org/pub/scm/utils/mdadm/mdadm.git/log/?qt=grep\&q=Michal+Zylowski}{My mdadm patches}}{}
 
-\portfolioitem{2017/02 - 2017/05}{POC and tech analysis: CRI-o with Kubernetes}{Code developer, DevOps}{img/crio-logo.png}{1}
+\portfolioitem{2017/02 - 2017/05}{POC and tech analysis: CRI-o with K8S}{Code developer, DevOps}{img/crio-logo.png}{1}
 {With friend from my team I tried to change k8s backend from docker to cri-o. We found some issues to fix on the cri-o part. After merging PR’s related with them I run e2e k8s conformance tests, to check how many features must be fixed and re-implemented in cri-o. During this POC cri-o was in early stage and a lot of trics was required to achieve the goal.}
 {\portfoliohref{https://github.com/cri-o/cri-o/pull/342}{Example of contribution} | \portfoliohref{https://github.com/cri-o/cri-o/pull/353}{Result of the POC}}{}
 
@@ -696,7 +703,12 @@ OVH: & \circled{99} & GCP: & \circled{75} & AWS: & \circled{40} & Azure: & \circ
 {Rkt is alternative for docker containers. Rkt-monitor is simple golang app included in rkt repo, designed for measuring performance of entire stack. I made some fixes for rkt-monitor and I discovered performance issue. Also I prepared CI solution (based on Jenkins and my own python scripts) for  running measurements daily.}
 {\portfoliohref{https://github.com/rkt/rkt/pull/3093/files}{Example of contribution} | \portfoliohref{https://github.com/rkt/rkt/issues/3019}{Discovered issue}}{}
 
-\portfolioitem{2016/10 - 2017/01}{k8s e2e testing \& k8s deployment (Kubespray)}{Code developer, DevOps}{img/k8s.png}{0.8}
+\vspace*{\fill}
+\hspace{-0.25\linewidth}\colorbox{bgcol}{\makebox[1.5\linewidth][c]{\mystrut \small \textcolor{white}{ }}}
+
+\newpage
+
+\portfolioitem{2016/10 - 2017/01}{k8s e2e testing \& deployment by Kubespray}{Code developer, DevOps}{img/k8s.png}{0.8}
 {Kubespray is a set of ansible scripts related with installing Kubernetes. My team was interested running kubernetes e2e tests with docker and rkt containerizers on bare metal. We were responsible for solving issues and tests in kubernetes one by one. It was important for us to redeploy k8s clusters easy and fast, so I was also involved in kubespray development.}
 {\portfoliohref{https://github.com/kubernetes-sigs/kubespray/pull/852}{PR to Kubespray} | \portfoliohref{https://github.com/kubernetes-sigs/kubespray/issues/610}{Issue submitted to Kubespray} | \portfoliohref{https://github.com/kubernetes/kubernetes/pull/35302}{k8s e2e test fix}}{-----}
 
@@ -704,10 +716,6 @@ OVH: & \circled{99} & GCP: & \circled{75} & AWS: & \circled{40} & Azure: & \circ
 {Serenity is a plugin for Mesos solution. Plugin improves scheduler and resources utilization mechanism. I was responsible for creating check that simulate real user network traffic. Technology stack: Stressing Wikimedia (deployed on Mesos cluster) by the gatling stress tool. Also in this project I helped to decrease time needed to run Mesos oversubscription tests by preparing scripts (ansible + python) for automated tests execution and results collection.}
 {\portfoliohref{https://github.com/mesosphere/serenity}{Serenity on github}}{------}
 
-\vspace*{\fill}
-\hspace{-0.25\linewidth}\colorbox{bgcol}{\makebox[1.5\linewidth][c]{\mystrut \small \textcolor{white}{ }}}
-
-\newpage
 \cvsection{Non profit projects}
 
 \portfolioitem{2017/10 - 2019/06}{New technologies for Women}{Mentor}{img/ntdd.png}{0.8}
