@@ -711,7 +711,11 @@ Docker: & \circled{90} & S3/Minio: & \circled{95}  \\
 
 \portfolioitem{2020/05 - now}{Networking in OVHcloud Public Cloud}{Code developer \& DevOps}{img/ovhcloud.jpg}{1.0}
 {OVH's Public Cloud is built on an Openstack solution, where project Neutron is responsible for networking part. To handle networking in a way that OVH needs few python agents (Neutron plugins) were introduced. In R\&D team where I also belong We are responsible for developing and maintaining those plugins. This includes bug fixing, deep debugging around linux system and networking, upgrading to new Openstack releases and delivering new features like L3 services or virtual routers.}
-{\portfoliohref{https://github.com/svinota/pyroute2/pull/779}{Example of external contribution}}{---}
+{\portfoliohref{https://github.com/svinota/pyroute2/pull/779}{Example of external contribution}}{-}
+
+\portfolioitem{2019/07 - 2019/10}{Video course about Kubernetes}{Author \& Tutor}{img/helion.png}{1.0}
+{During summer 2019 I prepared video training about Kubernetes orchestrator. Course is available to buy even now on Helion (polish publishing house) website. The training is available only in polish language. The course starts with a complete basics, covers all elementary kubernetes objects, goes through k8s deployment and in the end it touches a bit more advanced topics like init containers, security context, exposing services outside of the cluster.}
+{\portfoliohref{https://helion.pl/ksiazki/kubernetes-kurs-video-wdrazanie-aplikacji-michal-zylowski,vuruap.htm}{My kubernetes training [PL]}}{-}
 
 \portfolioitem{2018/10 - 2020/05}{Nauta Platform}{Code developer \& DevOps}{img/nauta.png}{1.1}
 {Nauta is a deep learning platform developed on top of a Kubernetes cluster that allows scheduling artificial intelligence experiments by data-scientists not familiarized with clouds topics. I joined to Nauta development team when project was is alpha state. My responsibilities were related with maintaining platform build system written in makefile and ansible, preparing user-guide web UI and fixing bugs in nauta CLI(python). I also was involved in development of internal CI/CD solution. Nauta is an open source project published on github, written in python, go-lang, JS and others.}
@@ -725,14 +729,14 @@ Docker: & \circled{90} & S3/Minio: & \circled{95}  \\
 {With friend from my team I tried to change k8s backend from docker to cri-o. We found some issues to fix on the cri-o part. After merging PR’s related with them I run e2e k8s conformance tests, to check how many features must be fixed and re-implemented in cri-o. During this POC cri-o was in early stage and a lot of trics was required to achieve the goal.}
 {\portfoliohref{https://github.com/cri-o/cri-o/pull/342}{Example of contribution} | \portfoliohref{https://github.com/cri-o/cri-o/pull/353}{Result of the POC}}{}
 
-\portfolioitem{2016/05 - 2016/09}{Benchmarking of rkt container system}{Code developer, CI/CD owner}{img/rkt.png}{0.9}
-{Rkt is alternative for docker containers. Rkt-monitor is simple golang app included in rkt repo, designed for measuring performance of entire stack. I made some fixes for rkt-monitor and I discovered performance issue. Also I prepared CI solution (based on Jenkins and my own python scripts) for  running measurements daily.}
-{\portfoliohref{https://github.com/rkt/rkt/pull/3093/files}{Example of contribution} | \portfoliohref{https://github.com/rkt/rkt/issues/3019}{Discovered issue}}{}
-
 \vspace*{\fill}
 \hspace{-0.25\linewidth}\colorbox{bgcol}{\makebox[1.5\linewidth][c]{\mystrut \small \textcolor{white}{ }}}
 
 \newpage
+
+\portfolioitem{2016/05 - 2016/09}{Benchmarking of rkt container system}{Code developer, CI/CD owner}{img/rkt.png}{0.9}
+{Rkt is alternative for docker containers. Rkt-monitor is simple golang app included in rkt repo, designed for measuring performance of entire stack. I made some fixes for rkt-monitor and I discovered performance issue. Also I prepared CI solution (based on Jenkins and my own python scripts) for  running measurements daily.}
+{\portfoliohref{https://github.com/rkt/rkt/pull/3093/files}{Example of contribution} | \portfoliohref{https://github.com/rkt/rkt/issues/3019}{Discovered issue}}{}
 
 \portfolioitem{2016/10 - 2017/01}{k8s e2e testing \& deployment by Kubespray}{Code developer, DevOps}{img/k8s.png}{0.8}
 {Kubespray is a set of ansible scripts related with installing Kubernetes. My team was interested running kubernetes e2e tests with docker and rkt containerizers on bare metal. We were responsible for solving issues and tests in kubernetes one by one. It was important for us to redeploy k8s clusters easy and fast, so I was also involved in kubespray development.}
