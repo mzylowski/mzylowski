@@ -17,7 +17,7 @@ ___
 ![](https://img.shields.io/badge/CI/CD-Jenkins-informational?style=flat&logo=jenkins&logoColor=white&color=b3ccff)
 ![](https://img.shields.io/badge/CI/CD-GithubActions-informational?style=flat&logo=githubactions&logoColor=white&color=b3ccff)
 ![](https://img.shields.io/badge/Code-Python-informational?style=flat&logo=python&logoColor=white&color=b3ccff)
-![](https://img.shields.io/badge/Code-Ansible-informational?style=flat&logo=ansible&logoColor=white&color=b3ccff)
+![](https://img.shields.io/badge/Automate-Ansible-informational?style=flat&logo=ansible&logoColor=white&color=b3ccff)
 ![](https://img.shields.io/badge/Code-Helm-informational?style=flat&logo=helm&logoColor=white&color=b3ccff)
 ![](https://img.shields.io/badge/Shell-Bash-informational?style=flat&logo=gnu-bash&logoColor=white&color=b3ccff)
 ![](https://img.shields.io/badge/OS-Linux-informational?style=flat&logo=linux&logoColor=white&color=b3ccff)
@@ -34,9 +34,14 @@ ___
 ![](https://img.shields.io/badge/Code-.net-informational?style=flat&logo=sharp&logoColor=white&color=b3ccff)
 ![](https://img.shields.io/badge/Code-PHP-informational?style=flat&logo=php&logoColor=white&color=b3ccff)
 ![](https://img.shields.io/badge/Code-WebDev-informational?style=flat&logo=html5&logoColor=white&color=b3ccff)
-![](https://img.shields.io/badge/Code-Java-informational?style=flat&logo=java&logoColor=white&color=b3ccff)
-![](https://img.shields.io/badge/Code-Terraform-informational?style=flat&logo=terraform&logoColor=white&color=b3ccff)
+![](https://img.shields.io/badge/Automate-Terraform-informational?style=flat&logo=terraform&logoColor=white&color=b3ccff)
 ![](https://img.shields.io/badge/CI/CD-CircleCi-informational?style=flat&logo=circleci&logoColor=white&color=b3ccff)
+
+#### Just touched a bit
+![](https://img.shields.io/badge/Code-Java-informational?style=flat&logo=java&logoColor=white&color=b3ccff)
+![](https://img.shields.io/badge/PaaS-OpenShift-informational?style=flat&logo=redhatopenshift&logoColor=white&color=b3ccff)
+![](https://img.shields.io/badge/Automate-Puppet-informational?style=flat&logo=puppet&logoColor=white&color=b3ccff)
+![](https://img.shields.io/badge/AI-Tensorflow-informational?style=flat&logo=tensorflow&logoColor=white&color=b3ccff)
 
 ### GitHub profile stats
 ___
