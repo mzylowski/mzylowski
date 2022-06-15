@@ -1,4 +1,4 @@
-### mzylowsk CV and portfolio
+### mzylowski CV and portfolio
 
 CV bases on sidebar template from https://github.com/jankapunkt/latexcv project. Boosted by mzylowski.
 
