@@ -27,11 +27,16 @@ jobs:
         working-directory: ./cv
       - name: Run spellchecker
         run: yarn spellcheck
+      - name: Split CV to cv and portfolio pdf's.
+        run: docker exec cv ./splitter.sh
       - name: Release
         uses: softprops/action-gh-release@v1
         if: github.ref == 'refs/heads/master'
         with:
-          files: cv/cv/cv.pdf
+          files: |
+            cv/cv/cv_portfolio.pdf
+            cv/cv/cv.pdf
+            cv/cv/portfolio.pdf
           tag_name: "latest"
           body: "Current CV from master branch"
           fail_on_unmatched_files: true
