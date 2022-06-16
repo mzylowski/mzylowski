@@ -1,8 +1,8 @@
 ### Bio
 ___
-From 2 years Michal is working with Openstack as DevOps engineer at OVHcloud in Poland. He is working around python networking plugins that integrates neutron with OVH network infrastructure. Former Intel Corporation Cloud Engineer mostly focused on Kubernetes and containerization. Took part in cloud project related with scheduling AI trainings on k8s clusters. Former university teacher of computer science subjects. Michał is a graduate of the Gdańsk University of Technology (ETI faculty). 
+From 2 years Michal is working with OpenStack as DevOps engineer at OVHcloud in Poland. He is working around python networking plugins that integrates OpenStack Neutron with OVH network infrastructure. Former Intel Corporation Cloud Engineer mostly focused on Kubernetes and containerization. Took part in the cloud project related to scheduling AI trainings on k8s clusters. Former university teacher of computer science subjects. Michał is a graduate of the Gdańsk University of Technology (ETI faculty).
 
-Professional hobbies are public cloud, scheduling, automation and  efficient CI/CD systems. In free time Michal doing some geocaching, chess or board games.
+Professional hobbies are public cloud, scheduling, automation and efficient CI/CD systems. In free time Michal doing some geocaching, chess or board games.
 
 ### Tools & Technologies
 ___
