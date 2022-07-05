@@ -11,7 +11,7 @@ def fill_with_color(filename, color):
     root = xml.getroot()
     root.set('fill', color)
     xml.write(f"{filename}.svg", xml_declaration=False)
-    svg2png(file_obj=open(f"{filename}.svg"), write_to=f"png/{filename}.png", scale=10)
+    svg2png(file_obj=open(f"{filename}.svg"), write_to=f"png/{filename}.png", scale=2)
     os.remove(f"{filename}.svg")
 
 

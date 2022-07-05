@@ -1,5 +1,5 @@
 {
-  "color": "#00FF00",
+  "color": "#5e8fc9",
   "icons": [
     {"name":  "python"},
     {"name":  "csharp"},
@@ -14,7 +14,7 @@
     {"name":  "googlecloud"},
     {"name":  "amazonaws"},
     {"name":  "azuredevops"},
-    {"name":  "pcgamingwiki"},
+    {"name":  "gnometerminal"},
     {"name":  "jenkins"},
     {"name":  "githubactions"},
     {"name":  "circleci"},
@@ -22,6 +22,9 @@
     {"name":  "terraform"},
     {"name":  "puppet"},
     {"name":  "amazons3"},
-    {"name":  "mysql"}
+    {"name":  "mysql"},
+    {"name":  "gnubash"},
+    {"name":  "linux"},
+    {"name":  "protonvpn"}
   ]
 }
