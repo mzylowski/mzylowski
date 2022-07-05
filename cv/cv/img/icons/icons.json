@@ -1,0 +1,27 @@
+{
+  "color": "#00FF00",
+  "icons": [
+    {"name":  "python"},
+    {"name":  "csharp"},
+    {"name":  "go"},
+    {"name":  "cplusplus"},
+    {"name":  "html5"},
+    {"name":  "kubernetes"},
+    {"name":  "openstack"},
+    {"name":  "apache"},
+    {"name":  "docker"},
+    {"name":  "ovh"},
+    {"name":  "googlecloud"},
+    {"name":  "amazonaws"},
+    {"name":  "azuredevops"},
+    {"name":  "pcgamingwiki"},
+    {"name":  "jenkins"},
+    {"name":  "githubactions"},
+    {"name":  "circleci"},
+    {"name":  "ansible"},
+    {"name":  "terraform"},
+    {"name":  "puppet"},
+    {"name":  "amazons3"},
+    {"name":  "mysql"}
+  ]
+}
