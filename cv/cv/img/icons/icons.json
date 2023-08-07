@@ -25,6 +25,8 @@
     {"name":  "mysql"},
     {"name":  "gnubash"},
     {"name":  "linux"},
-    {"name":  "protonvpn"}
+    {"name":  "protonvpn"},
+    {"name":  "argo"},
+    {"name":  "vault"}
   ]
 }
