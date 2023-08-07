@@ -544,7 +544,7 @@ Senior DevOps engineer working at Dynatrace on robust deployment tool called DoK
 
 %\larrow{softcol} Working using agile methodologies (Scrum, Kanban).
 
-\larrow{softcol} Understanding concept of CI/CD and experience in ArgoWF and GH Actions.
+\larrow{softcol} Understanding concept of CI/CD and experience in Argo WF and GH Actions.
 
 \larrow{softcol} Maintaining production k8s clusters in both private and public environments.
 
@@ -721,7 +721,11 @@ Vault & Containers & Minio/S3 & Apache Mesos \\[3pt]
 \newpage
 \cvsection{Projects Portfolio}
 
-\portfolioitem{2020/05 - now}{Networking in OVHcloud Public Cloud}{Code developer \& DevOps}{img/ovhcloud.jpg}{1.0}
+\portfolioitem{2022/10 - now}{Dynatrace on Kubernetes}{Developer \& DevOps \& Production maintainer}{img/dynatrace.png}{0.8}
+{Dynatrace on Kubernetes (DoK) is a internal tooling - set of terraform code, charts, python and bash scripts, that fully running will deploy working Kubernetes cluster on chosen cloud provider (AWS, Azure, Google). Together with infrastructure deployed by terraform, also applications released by helm charts will be delivered to the cluster. We deploying huge Java application as our Dynatrace server, multiple Cassandra and ElasticSearch pods as backend for the server, ingress and many more smaller applications. Tooling is delivered together with advanced Argo workflows that supports k8s upgrades without downtime, backup, disaster recovery and more. I was implementing multiple features at all levels of this solution, but most significant for me was pushing HashiCorp Vault to DoK stack.}
+{\portfoliohref{https://github.com/cscetbon/casskop}{n/a}}{------}
+
+\portfolioitem{2020/05 - 2022/10}{Networking in OVHcloud Public Cloud}{Code developer \& DevOps}{img/ovhcloud.jpg}{1.0}
 {OVH's Public Cloud is built on an OpenStack solution, where project Neutron is responsible for the networking part. To handle networking in a way that OVH needs, few python agents (Neutron plugins) were introduced. In R\&D team where I also belong, we are responsible for developing and maintaining those plugins. This includes bug fixing, deep debugging around the Linux system and networking, upgrading to new OpenStack releases and delivering new features like L3 services or virtual routers.}
 {\portfoliohref{https://github.com/svinota/pyroute2/pull/779}{Example of external contribution}}{-}
 
@@ -737,14 +741,14 @@ Vault & Containers & Minio/S3 & Apache Mesos \\[3pt]
 {VROC is a name for the entire solution related with software RAID arrays targeted to enterprise solutions. Solution consists of two Linux applications: mdadm and ledmon, and with kernel module named md. All related code is written in C. My team was responsible for maintenance of IMSM metadata in mdadm and the entire Linux ecosystem. Mdadm is used as CLI tool in RHEL, SLES and Ubuntu operating systems. My work was mostly related with bug fixing and cooperation with operating systems vendors (like SUSE or Cannonical). When mdadm is external kernel project, ledmon is an open source project fully developed by Intel and I was a maintainer of the project and repository. Ledmon was designed for blinking LEDs of disks under RAID arrays in the VROC stack.}
 {\portfoliohref{https://github.com/intel/ledmon/commits?author=mzylowski}{My ledmon commits} | \portfoliohref{https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/scripts/checkpatch.pl?id=6ad724e2a48fc24dd9788490d85a3490cb0117c1}{Kernel patch} | \portfoliohref{https://git.kernel.org/pub/scm/utils/mdadm/mdadm.git/log/?qt=grep\&q=Michal+Zylowski}{My mdadm patches}}{}
 
-\portfolioitem{2017/02 - 2017/05}{POC and tech analysis: CRI-o with K8S}{Code developer, DevOps}{img/crio-logo.png}{1}
-{With a friend from my team I tried to change k8s backend from docker to cri-o. We found some issues to fix on the cri-o part. After merging PR’s related with them, I run e2e k8s conformance tests, to check how many features must be fixed and re-implemented in cri-o. During this POC cri-o was in an early stage and a lot of hacks was required to achieve the goal.}
-{\portfoliohref{https://github.com/cri-o/cri-o/pull/342}{Example of contribution} | \portfoliohref{https://github.com/cri-o/cri-o/pull/353}{Result of the POC}}{}
-
 \vspace*{\fill}
 \hspace{-0.25\linewidth}\colorbox{bgcol}{\makebox[1.5\linewidth][c]{\mystrut \small \textcolor{white}{ }}}
 
 \newpage
+
+\portfolioitem{2017/02 - 2017/05}{POC and tech analysis: CRI-o with K8S}{Code developer, DevOps}{img/crio-logo.png}{1}
+{With a friend from my team I tried to change k8s backend from docker to cri-o. We found some issues to fix on the cri-o part. After merging PR’s related with them, I run e2e k8s conformance tests, to check how many features must be fixed and re-implemented in cri-o. During this POC cri-o was in an early stage and a lot of hacks was required to achieve the goal.}
+{\portfoliohref{https://github.com/cri-o/cri-o/pull/342}{Example of contribution} | \portfoliohref{https://github.com/cri-o/cri-o/pull/353}{Result of the POC}}{}
 
 \portfolioitem{2016/05 - 2016/09}{Benchmarking of rkt container system}{Code developer, CI/CD owner}{img/rkt.png}{0.9}
 {Rkt is alternative for docker containers. Rkt-monitor is simple golang app included in rkt repo, designed for measuring performance of entire stack. I made some fixes for rkt-monitor and I discovered performance issue. Also I prepared CI solution (based on Jenkins and my own python scripts) for  running measurements daily.}
