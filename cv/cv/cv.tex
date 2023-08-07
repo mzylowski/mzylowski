@@ -180,8 +180,8 @@
 \newcommand{\cvsection}[1]
 {
 \colorbox{sectcol}{\mystrut \makebox[1\mpwidth][l]{
-\larrow{bgcol} \hspace{-8pt} \larrow{bgcol} \hspace{-8pt} \larrow{bgcol} \textbf{\textcolor{white}{\uppercase{#1}}}\hspace{4pt}
-}}\\
+\larrow{bgcol} \hspace{-8pt} \larrow{bgcol} \hspace{-8pt} \larrow{bgcol} \textbf{\textcolor{white}{\uppercase{#1}}}
+}}
 }
 
 % create a coloured arrow with title as cv meta section section
@@ -221,6 +221,35 @@
 }
 
 %----------------------------------------------------------------------------------------
+%	 CV SCHOOL
+%----------------------------------------------------------------------------------------
+
+% creates a stretched box as cv entry headline followed by two paragraphs about
+% the work you did
+% param 1:	event time i.e. 2014 or 2011-2014 etc.
+% param 2:	event name (what did you do?)
+% param 3:	institution (where did you work / study)
+% param 4:	what was your position
+% param 5:	some words about your contributions
+%
+\newcommand{\cvschool}[5]
+{
+\vspace{1pt}
+	\begin{tabular*}{1\mpwidth}{p{0.55\mpwidth}  x{0.42\mpwidth}}
+ 	\textcolor{black}{\textbf{#2}} & \textcolor{complcol}{#3}, \textcolor{bgcol}{#1}
+
+	\end{tabular*}
+\vspace{-12pt}
+\textcolor{softcol}{\hrule}
+\vspace{6pt}
+	\begin{tabular*}{0.5\mpwidth}{p{\mpwidth}}
+\larrow{softcol}  #4\\[3pt]
+\larrow{softcol}  #5\\[6pt]
+	\end{tabular*}
+
+}
+
+%----------------------------------------------------------------------------------------
 %	 CV EVENT
 %----------------------------------------------------------------------------------------
 
@@ -234,8 +263,8 @@
 %
 \newcommand{\cvevent}[5]
 {
-\vspace{8pt}
-	\begin{tabular*}{1\mpwidth}{p{0.55\mpwidth}  x{0.42\mpwidth}}
+\vspace{1pt}
+	\begin{tabular*}{1\mpwidth}{p{0.37\mpwidth}  x{0.60\mpwidth}}
  	\textcolor{black}{\textbf{#2}} & \textcolor{complcol}{#3}, \textcolor{bgcol}{#1} 
 
 	\end{tabular*}
@@ -255,8 +284,8 @@
 
 \newcommand{\portfolioitem}[8]
 {
-\medskip\medskip
-\vspace{8pt}
+\medskip
+\vspace{1pt}
 	\begin{tabular*}{1\mpwidth}{p{0.42\mpwidth}  x{0.55\mpwidth}}
  	\textcolor{black}{\textbf{#2}} & \textcolor{complcol}{#3}, \textcolor{bgcol}{#1}
 
@@ -294,7 +323,7 @@ Related links: #7 \\
 %
 \newcommand{\cveventlong}[7]
 {
-\vspace{8pt}
+\vspace{1pt}
 	\begin{tabular*}{1\mpwidth}{p{0.40\mpwidth}  x{0.57\mpwidth}}
  	\textcolor{black}{\textbf{#2}} & \textcolor{complcol}{#3}, \textcolor{bgcol}{#1}
 
@@ -324,7 +353,7 @@ Related links: #7 \\
 %
 \newcommand{\cveventone}[4]
 {
-\vspace{8pt}
+\vspace{1pt}
 	\begin{tabular*}{1\mpwidth}{p{0.55\mpwidth}  x{0.42\mpwidth}}
  	\textcolor{black}{\textbf{#2}} & \textcolor{complcol}{#3}, \textcolor{bgcol}{#1}
 
@@ -350,7 +379,7 @@ Related links: #7 \\
 %
 \newcommand{\simplelist}[3]
 {
-\vspace{8pt}
+\vspace{1pt}
 	\begin{tabular*}{1\mpwidth}{p{0.48\mpwidth}  x{0.49\mpwidth}}
  	\textcolor{black}{\textbf{#1}}
 
@@ -475,10 +504,9 @@ Related links: #7 \\
 %---------------------------------------------------------------------------------------
 %	STATUS
 %----------------------------------------------------------------------------------------
-\cvsection{Status}
-
-Remote Cloud Software Engineer at OVHcloud. Part of R\&D team where I'm working with DevOps philosophy around OpenStack (Neutron) networking and L3 services. I'm responsible for my code change on all levels: from python code, through review and merging, up to prodding new packages to the production environment. Believer of open source philosophy. The breadth of knowledge approach.
-\vspace{12pt}
+\cvsection{Status}\\[5pt]
+Senior DevOps engineer working at Dynatrace on robust deployment tool called DoK (Dynatrace on Kubernetes). This tool can deploy fully working AKS/GKE cluster and will push there multiple needed helm apps. I'm responsible for my code change on all levels: from terraform/python/bash code, through review and merging, up to prodding new packages to the production environment. Believer of open source philosophy. The breadth of knowledge approach.
+\vspace{5pt}
 
 %---------------------------------------------------------------------------------------
 %	EXPERIENCE
@@ -486,7 +514,8 @@ Remote Cloud Software Engineer at OVHcloud. Part of R\&D team where I'm working 
 \cvsection{EMPLOYMENT HISTORY}
 
 %
-\cvevent{2020/05 - now}{OVHcloud}{Cloud DevOps}{OVH public cloud R\&D team member, responsible for networking in OpenStack.}{OVH Public Cloud expert. Workshops and conferences speaker.}
+\cvevent{2022/10 - now}{Dynatrace}{Senior Cloud DevOps}{Dynatrace on Kubernetes project team member, responsible for deploying end product app on Azure and Google clouds.}{Maintainer of multiple production k8s clusters with huge number of resources.}
+\cvevent{2020/05 - 2022/10}{OVHcloud}{Cloud DevOps}{OVH public cloud R\&D team member, responsible for networking in OpenStack.}{OVH Public Cloud expert. Workshops and conferences speaker.}
 \cvevent{2018/09 - 2021/06}{Gdańsk WSB University}{Lecturer}{Teacher of programming languages like: Python, C++, Java, C\#.} {Tutor of concepts like: Cloud, OOP, WWW designing, Version Control.}
 \cveventlong{2015/05 - 2020/05}{Intel Technology Poland}{Programmer \& DevOps}{2018/11 Software Cloud Engineer at Artificial Intelligence group in Nauta project.}{2017/10 Software Development Engineer at Linux Virtual RAID on CPU project.}{2017/05 Software Validation Engineer at Rapid Storage Technology enterprise team.}{2015/05 Software Engineer Intern at Software Defined Infrastructure team.}
 
@@ -498,7 +527,7 @@ Remote Cloud Software Engineer at OVHcloud. Part of R\&D team where I'm working 
 %--------------------------------------------------------------------------------------
 \cvsection{EDUCATION}
 
-\cvevent{2012-2017}{Gdańsk University of Technology}{ETI Faculty}{Master degree: Informatics, full-time. Thesis: Mesos schedulers examination.}{Engineering degree: Informatics, full-time. Thesis: Programmable RTS game.}
+\cvschool{2012-2017}{Gdańsk University of Technology}{ETI Faculty}{Master degree: Informatics, full-time. Thesis: Mesos schedulers examination.}{Engineering degree: Informatics, full-time. Thesis: Programmable RTS game.}
 \cveventone{2007-2011}{Zespół Szkół Technicznych Grudziądz}{IT technical school}{Course: Computer Science, Specialization: Internet Applications.}
 \simplelist{Certificates}{2016/07  Linux Troubleshooting training performed by Hewlett Packard Enterprise}{2013/06 “ABC of business management” certificate.}
 
@@ -509,13 +538,13 @@ Remote Cloud Software Engineer at OVHcloud. Part of R\&D team where I'm working 
 
 \larrow{softcol} Taking part in a software development process using agile methodologies.
 
-\larrow{softcol} Understanding Test Driven Development technique.
+%\larrow{softcol} Understanding Test Driven Development technique.
 
 \larrow{softcol} Ability to debug complex and not obvious issues in Linux ecosystems.
 
 %\larrow{softcol} Working using agile methodologies (Scrum, Kanban).
 
-\larrow{softcol} Understanding concept of CI/CD and experience in Jenkins and GH Actions.
+\larrow{softcol} Understanding concept of CI/CD and experience in ArgoWF and GH Actions.
 
 \larrow{softcol} Maintaining production k8s clusters in both private and public environments.
 
@@ -527,7 +556,7 @@ Remote Cloud Software Engineer at OVHcloud. Part of R\&D team where I'm working 
 
 \larrow{softcol} Tenacity during issue fixing and taking responsibility for the result.
 
-\larrow{softcol} Competence to present project at conferences or meetings with customers.
+\larrow{softcol} Competence to present solutions at conferences or meetings with customers.
 \vspace{5px}
 
 \end{minipage}}%
@@ -537,17 +566,17 @@ Remote Cloud Software Engineer at OVHcloud. Part of R\&D team where I'm working 
 \begin{center}
 \includegraphics[width=0.7\mpwidth]{img/mz.png}
 
-\icontext{MapMarker}{12}{Gdańsk, Poland}{white}\\[6pt]
-\icontext{Calendar}{12}{31 years old}{white}\\[6pt]
+\icontext{MapMarker}{12}{Gdańsk, Poland}{white}\\[5pt]
+\icontext{Calendar}{12}{32 years old}{white}\\[5pt]
 \end{center}
 
 \begin{metasection}{Contact}
 
-	\iconhref{MousePointer}{12}{zylowski.net}{https://zylowski.net}{white}\\[6pt]
-	\iconhref{Github}{12}{github.com/mzylowski}{https://github.com/mzylowski}{white}\\[6pt]
-	\iconhref{Linkedin}{12}{@michal\_zylowski}{https://www.linkedin.com/in/mzylowski}{white}\\[6pt]
-	%\icontext{MobilePhone}{12}{+48 *** *** ***}{white}\\[6pt]
-	\iconemail{Envelope}{12}{michal@zylowski.net}{michal@zylowski.net}{white}\\[6pt]
+	\iconhref{MousePointer}{12}{zylowski.net}{https://zylowski.net}{white}\\[5pt]
+	\iconhref{Github}{12}{github.com/mzylowski}{https://github.com/mzylowski}{white}\\[5pt]
+	\iconhref{Linkedin}{12}{@michal\_zylowski}{https://www.linkedin.com/in/mzylowski}{white}\\[5pt]
+%	\icontext{MobilePhone}{12}{+48 *** *** ***}{white}\\[5pt]
+	\iconemail{Envelope}{12}{michal@zylowski.net}{michal@zylowski.net}{white}\\[5pt]
 \end{metasection}
 
 %----------------------------------------------------------------------------------------
@@ -556,18 +585,18 @@ Remote Cloud Software Engineer at OVHcloud. Part of R\&D team where I'm working 
 
 \begin{metasection}{Fields}
 
-\icontext{Code}{12}{Software Development}{white}\\[6pt]
-\icontext{Retweet}{12}{Automation}{white}\\[6pt]
-\icontext{Bolt}{12}{Mentoring}{white}\\[6pt]
-\icontext{Server}{12}{DevOps}{white}\\[6pt]
-\icontext{Cloud}{12}{Cloud}{white}\\[6pt]
-\icontext{CheckCircle}{12}{CI/CD}{white}\\[6pt]
+\icontext{Code}{12}{Software Development}{white}\\[5pt]
+\icontext{Retweet}{12}{Automation}{white}\\[5pt]
+\icontext{Bolt}{12}{Mentoring}{white}\\[5pt]
+\icontext{Server}{12}{DevOps}{white}\\[5pt]
+\icontext{Cloud}{12}{Cloud}{white}\\[5pt]
+\icontext{CheckCircle}{12}{CI/CD}{white}\\[5pt]
 
 \end{metasection}
 \begin{metasection}{Tools}
 
 \textcolor{white}{
-\icontext{Cubes}{12}{Pycharm}{white} \icontext{Terminal}{12}{Terminal}{white} \\[6pt] \icontext{CodeFork}{12}{Git}{white} \icontext{Tasks}{12}{Jira}{white}\icontext{Github}{12}{Github}{white}  \\[6pt]
+\icontext{Cubes}{12}{Pycharm}{white} \icontext{Terminal}{12}{Terminal}{white} \\[5pt] \icontext{CodeFork}{12}{Git}{white} \icontext{Tasks}{12}{Jira}{white}\icontext{Github}{12}{Github}{white} \\[5pt] \icontext{Refresh}{12}{k9s}{white} \icontext{Slack}{12}{Slack}{white}\\
 }
 \end{metasection}
 
