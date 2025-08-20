@@ -91,3 +91,8 @@ Argo
 helmfile
 WF
 ElasticSearch
+lifecycle
+DevOneHub
+ExternalSecrets
+Casskop
+fdisk
