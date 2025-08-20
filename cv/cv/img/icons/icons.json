@@ -17,16 +17,16 @@
     {"name":  "gnometerminal"},
     {"name":  "jenkins"},
     {"name":  "githubactions"},
-    {"name":  "circleci"},
     {"name":  "ansible"},
     {"name":  "terraform"},
-    {"name":  "puppet"},
     {"name":  "amazons3"},
     {"name":  "mysql"},
     {"name":  "gnubash"},
     {"name":  "linux"},
     {"name":  "protonvpn"},
     {"name":  "argo"},
-    {"name":  "vault"}
+    {"name":  "vault"},
+    {"name":  "keeweb"},
+    {"name":  "robotframework"}
   ]
 }
